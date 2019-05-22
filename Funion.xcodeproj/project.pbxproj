@@ -44,7 +44,7 @@
 		10039FDE228E9E0C00CCC636 = {
 			isa = PBXGroup;
 			children = (
-				10039FE9228E9E0C00CCC636 /* CoolSter */,
+				10039FE9228E9E0C00CCC636 /* Funion */,
 				10039FE8228E9E0C00CCC636 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,7 +57,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		10039FE9228E9E0C00CCC636 /* CoolSter */ = {
+		10039FE9228E9E0C00CCC636 /* Funion */ = {
 			isa = PBXGroup;
 			children = (
 				10039FEA228E9E0C00CCC636 /* AppDelegate.swift */,
@@ -67,7 +67,7 @@
 				10039FF3228E9E0C00CCC636 /* LaunchScreen.storyboard */,
 				10039FF6228E9E0C00CCC636 /* Info.plist */,
 			);
-			path = CoolSter;
+			path = Funion;
 			sourceTree = "<group>";
 		};
 		109D1C732295ACC1006C2920 /* Main Screen */ = {
@@ -312,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YL8QB5EG34;
-				INFOPLIST_FILE = CoolSter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Funion/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YL8QB5EG34;
-				INFOPLIST_FILE = CoolSter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Funion/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
