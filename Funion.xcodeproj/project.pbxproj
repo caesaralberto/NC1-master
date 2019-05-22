@@ -13,6 +13,8 @@
 		10039FF2228E9E0C00CCC636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10039FF1228E9E0C00CCC636 /* Assets.xcassets */; };
 		10039FF5228E9E0C00CCC636 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10039FF3228E9E0C00CCC636 /* LaunchScreen.storyboard */; };
 		109D1C5822943BB5006C2920 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D1C5722943BB5006C2920 /* NextViewController.swift */; };
+		109D1C752295AEB8006C2920 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109D1C742295AEB8006C2920 /* SplashScreen.storyboard */; };
+		109D1C772295AEE3006C2920 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D1C762295AEE3006C2920 /* SplashScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		10039FF4228E9E0C00CCC636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10039FF6228E9E0C00CCC636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		109D1C5722943BB5006C2920 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		109D1C742295AEB8006C2920 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		109D1C762295AEE3006C2920 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			children = (
 				10039FEA228E9E0C00CCC636 /* AppDelegate.swift */,
 				109D1C732295ACC1006C2920 /* Main Screen */,
+				109D1C782295C728006C2920 /* Splash Screen */,
 				10039FF1228E9E0C00CCC636 /* Assets.xcassets */,
 				10039FF3228E9E0C00CCC636 /* LaunchScreen.storyboard */,
 				10039FF6228E9E0C00CCC636 /* Info.plist */,
@@ -73,6 +78,15 @@
 				10039FEE228E9E0C00CCC636 /* Main.storyboard */,
 			);
 			path = "Main Screen";
+			sourceTree = "<group>";
+		};
+		109D1C782295C728006C2920 /* Splash Screen */ = {
+			isa = PBXGroup;
+			children = (
+				109D1C742295AEB8006C2920 /* SplashScreen.storyboard */,
+				109D1C762295AEE3006C2920 /* SplashScreenViewController.swift */,
+			);
+			path = "Splash Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,7 +124,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 10039FE2228E9E0C00CCC636 /* Build configuration list for PBXProject "CoolSter" */;
+			buildConfigurationList = 10039FE2228E9E0C00CCC636 /* Build configuration list for PBXProject "Funion" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -134,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10039FF5228E9E0C00CCC636 /* LaunchScreen.storyboard in Resources */,
+				109D1C752295AEB8006C2920 /* SplashScreen.storyboard in Resources */,
 				10039FF2228E9E0C00CCC636 /* Assets.xcassets in Resources */,
 				10039FF0228E9E0C00CCC636 /* Main.storyboard in Resources */,
 			);
@@ -148,6 +163,7 @@
 			files = (
 				10039FED228E9E0C00CCC636 /* ViewController.swift in Sources */,
 				109D1C5822943BB5006C2920 /* NextViewController.swift in Sources */,
+				109D1C772295AEE3006C2920 /* SplashScreenViewController.swift in Sources */,
 				10039FEB228E9E0C00CCC636 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,7 +345,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		10039FE2228E9E0C00CCC636 /* Build configuration list for PBXProject "CoolSter" */ = {
+		10039FE2228E9E0C00CCC636 /* Build configuration list for PBXProject "Funion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				10039FF7228E9E0C00CCC636 /* Debug */,
