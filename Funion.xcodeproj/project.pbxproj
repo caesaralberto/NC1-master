@@ -15,6 +15,10 @@
 		109D1C5822943BB5006C2920 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D1C5722943BB5006C2920 /* NextViewController.swift */; };
 		109D1C752295AEB8006C2920 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109D1C742295AEB8006C2920 /* SplashScreen.storyboard */; };
 		109D1C772295AEE3006C2920 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D1C762295AEE3006C2920 /* SplashScreenViewController.swift */; };
+		10C21351229807AB008151E3 /* Pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 10C21350229807AB008151E3 /* Pop.mp3 */; };
+		10C21353229807B6008151E3 /* Swoosh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 10C21352229807B6008151E3 /* Swoosh.mp3 */; };
+		10C21355229807ED008151E3 /* Winning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 10C21354229807ED008151E3 /* Winning.mp3 */; };
+		10C2135922982603008151E3 /* drum roll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 10C2135822982603008151E3 /* drum roll.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		109D1C5722943BB5006C2920 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		109D1C742295AEB8006C2920 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		109D1C762295AEE3006C2920 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		10C21350229807AB008151E3 /* Pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop.mp3; sourceTree = "<group>"; };
+		10C21352229807B6008151E3 /* Swoosh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Swoosh.mp3; sourceTree = "<group>"; };
+		10C21354229807ED008151E3 /* Winning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Winning.mp3; sourceTree = "<group>"; };
+		10C2135822982603008151E3 /* drum roll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "drum roll.mp3"; path = "../../../../Downloads/drum roll.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 				10039FEA228E9E0C00CCC636 /* AppDelegate.swift */,
 				109D1C732295ACC1006C2920 /* Main Screen */,
 				109D1C782295C728006C2920 /* Splash Screen */,
+				10C2134F2298076D008151E3 /* Music File */,
 				10039FF1228E9E0C00CCC636 /* Assets.xcassets */,
 				10039FF3228E9E0C00CCC636 /* LaunchScreen.storyboard */,
 				10039FF6228E9E0C00CCC636 /* Info.plist */,
@@ -87,6 +96,17 @@
 				109D1C762295AEE3006C2920 /* SplashScreenViewController.swift */,
 			);
 			path = "Splash Screen";
+			sourceTree = "<group>";
+		};
+		10C2134F2298076D008151E3 /* Music File */ = {
+			isa = PBXGroup;
+			children = (
+				10C21354229807ED008151E3 /* Winning.mp3 */,
+				10C21352229807B6008151E3 /* Swoosh.mp3 */,
+				10C2135822982603008151E3 /* drum roll.mp3 */,
+				10C21350229807AB008151E3 /* Pop.mp3 */,
+			);
+			path = "Music File";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				10039FF5228E9E0C00CCC636 /* LaunchScreen.storyboard in Resources */,
+				10C21353229807B6008151E3 /* Swoosh.mp3 in Resources */,
 				109D1C752295AEB8006C2920 /* SplashScreen.storyboard in Resources */,
+				10C21355229807ED008151E3 /* Winning.mp3 in Resources */,
+				10C2135922982603008151E3 /* drum roll.mp3 in Resources */,
+				10C21351229807AB008151E3 /* Pop.mp3 in Resources */,
 				10039FF2228E9E0C00CCC636 /* Assets.xcassets in Resources */,
 				10039FF0228E9E0C00CCC636 /* Main.storyboard in Resources */,
 			);

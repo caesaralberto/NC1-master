@@ -8,6 +8,7 @@
 
 import UIKit
 import AudioToolbox
+import AVFoundation
 
 extension UIColor{
     var shadeOrange: UIColor {return UIColor(displayP3Red: 248 / 255, green: 156 / 255, blue: 54 / 255, alpha: 1)}
@@ -17,6 +18,8 @@ extension UIColor{
 }
 
 class ViewController: UIViewController {
+    var audioPlayerOne = AVAudioPlayer()
+    var audioPlayerTwo = AVAudioPlayer()
     //set rgb value roundOne
     var redOne: Float = 255/255
     var greenOne: Float = 255/255
@@ -24,7 +27,6 @@ class ViewController: UIViewController {
     
     //for unwind segue
     @IBAction func backVc(_ sender: UIStoryboardSegue){
-        
     }
     
     //declare label text
@@ -47,13 +49,21 @@ class ViewController: UIViewController {
             backgroundView.layer.cornerRadius = backgroundView.frame.width / 2
         }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     //declare before appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        do{
+            audioPlayerOne = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "Pop", ofType: "mp3")!))
+            audioPlayerOne.prepareToPlay()
+            
+            audioPlayerTwo = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "drum roll", ofType: "mp3")!))
+            audioPlayerTwo.prepareToPlay()
+            audioPlayerTwo.numberOfLoops = 50
+        }catch{
+            print("error")
+        }
         
         //gradation color initialization
         let gradientLayer = CAGradientLayer()
@@ -78,29 +88,33 @@ class ViewController: UIViewController {
         
         //when view one isClicked
         backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.tap)))
+        
     }
     
     //function round one tap
     @objc func tap(){
         
         //show animation change color shape one
-        UIView.animate(withDuration: 2) {
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {
             self.backgroundView.backgroundColor = UIColor(displayP3Red: CGFloat(self.redOne), green: CGFloat(self.greenOne), blue: CGFloat(self.blueOne), alpha: 1)
-        }
-        
-        //show animation change label name
-        UIView.animate(withDuration: 1, delay: 1.5, options: .curveEaseOut, animations: {
-            self.orderLbl.text = "Wait"
-            self.orderLbl.alpha = 0
-            
+            self.audioPlayerOne.play()
         }) { (_) in
-            //play animate after label "wait" show
-            UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {
-                self.orderLbl.text = "Hold"
-                self.orderLbl.alpha = 1
+            //show animation change label name
+            UIView.animate(withDuration: 1, delay: 1.5, options: .curveEaseOut, animations: {
+                self.orderLbl.text = "Wait"
+                self.orderLbl.alpha = 0
+                self.backgroundView.isUserInteractionEnabled = false
+                self.audioPlayerTwo.play()
                 
             }) { (_) in
-                //
+                //play animate after label "wait" show
+                UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {
+                    self.backgroundView.isUserInteractionEnabled = true
+                    self.orderLbl.text = "Hold"
+                    self.orderLbl.alpha = 1
+                    
+                }) { (_) in
+                }
             }
         }
         
@@ -109,23 +123,25 @@ class ViewController: UIViewController {
             
             let scaling = CGAffineTransform(scaleX: 2, y: 2)
             let translating = CGAffineTransform(translationX: 0, y: 80)
-        
+            
             self.colorOne.alpha = 1.0
             self.colorOne.transform = CGAffineTransform(scaleX: 50, y: 50)
             self.backgroundView.alpha = 1.0
             self.backgroundView.transform = scaling.concatenating(translating)
             
         }) { (_) in
-            //
+            
         }
         
         //after finished round can be touch for other function
         let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.changeColor))
         tapGesture.minimumPressDuration = 0
         self.backgroundView.addGestureRecognizer(tapGesture)
+        
     }
     
     @objc func changeColor(gestureRecognizer: UILongPressGestureRecognizer){
+        
         //when hold view condition
         if gestureRecognizer.state == .changed {
             //when alpha of backgorundView less than 0
@@ -136,7 +152,7 @@ class ViewController: UIViewController {
                 
                 //reduce alpha of background view
                 UIView.animate(withDuration: 1, delay: 0, options: .curveLinear, animations: {
-                    self.backgroundView.alpha -= 0.09
+                    self.backgroundView.alpha -= 0.1
                 }) { (_) in
                     //
                 }
@@ -146,6 +162,8 @@ class ViewController: UIViewController {
                 self.orderLbl.text = ""
                 self.backgroundView.alpha = 1
                 self.colorOne.alpha = 1
+                self.audioPlayerTwo.stop()
+                
             }
         }
     }

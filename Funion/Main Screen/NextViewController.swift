@@ -7,14 +7,26 @@
 //
 
 import UIKit
+import AVFoundation
 
 class NextViewController: UIViewController {
+    
+    var audioPlayerNextPage = AVAudioPlayer()
 
     @IBOutlet weak var textLbl: UILabel!
     let shapeColor = [UIColor(displayP3Red: 250 / 255, green: 92 / 255, blue: 100 / 255, alpha: 1), UIColor(displayP3Red: 81 / 255, green: 180 / 255, blue: 144 / 255, alpha: 1), UIColor(displayP3Red: 46 / 255, green: 94 / 255, blue: 192 / 255, alpha: 1)]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        do{
+            audioPlayerNextPage = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "Winning", ofType: "mp3")!))
+            audioPlayerNextPage.prepareToPlay()
+            audioPlayerNextPage.numberOfLoops = 50
+        }catch{
+            print("error")
+        }
+        
         //gradation color initialization
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
@@ -24,14 +36,14 @@ class NextViewController: UIViewController {
         view.layer.insertSublayer(gradientLayer, at: 0)
         
         textLbl.text = "Woohooooo"
-        
+        audioPlayerNextPage.play()
         spawnBall()
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.tap)))
     }
     
     @objc func tap() {
-        performSegue(withIdentifier: "homeVc", sender: self)
         dismiss(animated: true, completion: nil)
+        audioPlayerNextPage.stop()
     }
     
     func spawnBall () {
