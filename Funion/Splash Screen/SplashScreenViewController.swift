@@ -38,7 +38,7 @@ class SplashScreenViewController: UIViewController {
             self.splashScreenImage.transform = rotate
         }) { (finished) in
            
-            UIView.animate(withDuration: 1, delay: 0, options: [.transitionCrossDissolve], animations: {
+            UIView.animate(withDuration: 1, delay: 0, options: .transitionCrossDissolve, animations: {
                 
                 let scale = CGAffineTransform(scaleX: 50, y: 50)
                 

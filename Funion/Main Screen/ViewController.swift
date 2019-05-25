@@ -11,10 +11,10 @@ import AudioToolbox
 import AVFoundation
 
 extension UIColor{
-    var shadeOrange: UIColor {return UIColor(displayP3Red: 248 / 255, green: 156 / 255, blue: 54 / 255, alpha: 1)}
-    var middleOrange: UIColor {return UIColor(displayP3Red: 246 / 255, green: 183 / 255, blue: 92 / 255, alpha: 1)}
-    var tintOrange: UIColor {return UIColor(displayP3Red: 249 / 255, green: 217 / 255, blue: 169 / 255, alpha: 1)}
-    var roundOneColor: UIColor {return UIColor(displayP3Red: 250 / 255, green: 92 / 255, blue: 100 / 255, alpha: 1)}
+    var shadeOrange: UIColor {return UIColor(displayP3Red: 255 / 255, green: 171 / 255, blue: 27 / 255, alpha: 1)}
+    var middleOrange: UIColor {return UIColor(displayP3Red: 255 / 255, green: 196 / 255, blue: 14 / 255, alpha: 1)}
+    var tintOrange: UIColor {return UIColor(displayP3Red: 254 / 255, green: 203 / 255, blue: 80 / 255, alpha: 1)}
+    var roundOneColor: UIColor {return UIColor(displayP3Red: 2 / 255, green: 190 / 255, blue: 112 / 255, alpha: 1)}
 }
 
 class ViewController: UIViewController {
@@ -40,6 +40,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var colorOne: UIView!{
         didSet{
             colorOne.layer.cornerRadius = colorOne.frame.width / 2
+            //            colorOne.layer.borderWidth = 5
+            //            colorOne.layer.borderColor = #colorLiteral(red: 1, green: 0.3921714723, blue: 0.396386385, alpha: 1)
         }
     }
     
@@ -47,6 +49,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var backgroundView: UIView!{
         didSet{
             backgroundView.layer.cornerRadius = backgroundView.frame.width / 2
+            //            backgroundView.layer.borderWidth = 5
+            //            backgroundView.layer.borderColor = #colorLiteral(red: 1, green: 0.3921714723, blue: 0.396386385, alpha: 1)
         }
     }
     
@@ -99,21 +103,38 @@ class ViewController: UIViewController {
             self.backgroundView.backgroundColor = UIColor(displayP3Red: CGFloat(self.redOne), green: CGFloat(self.greenOne), blue: CGFloat(self.blueOne), alpha: 1)
             self.audioPlayerOne.play()
         }) { (_) in
+            
             //show animation change label name
-            UIView.animate(withDuration: 1, delay: 1.5, options: .curveEaseOut, animations: {
-                self.orderLbl.text = "Wait"
+            UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {
+                self.orderLbl.text = "3"
                 self.orderLbl.alpha = 0
                 self.backgroundView.isUserInteractionEnabled = false
                 self.audioPlayerTwo.play()
                 
             }) { (_) in
-                //play animate after label "wait" show
-                UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {
-                    self.backgroundView.isUserInteractionEnabled = true
-                    self.orderLbl.text = "Hold"
+                UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {
                     self.orderLbl.alpha = 1
-                    
+                    self.orderLbl.text = "2"
+                    self.backgroundView.isUserInteractionEnabled = false
+                    self.orderLbl.alpha = 0
                 }) { (_) in
+                    UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {
+                        self.orderLbl.alpha = 1
+                        self.orderLbl.text = "1"
+                        self.backgroundView.isUserInteractionEnabled = false
+                        self.orderLbl.alpha = 0
+                        
+                    }) { (_) in
+                        //play animate after label "wait" show
+                        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {
+                            self.backgroundView.isUserInteractionEnabled = true
+                            self.orderLbl.text = "Hold"
+                            self.orderLbl.alpha = 1
+                            
+                        }) { (_) in
+                        }
+                    }
+                    
                 }
             }
         }
