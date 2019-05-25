@@ -35,7 +35,11 @@ class NextViewController: UIViewController {
         gradientLayer.endPoint = CGPoint(x: 0.5,y: 1)
         view.layer.insertSublayer(gradientLayer, at: 0)
         
-        textLbl.text = "Woohooo!!!"
+        UIView.animate(withDuration: 0.3, delay: 0.8, options: [.transitionCrossDissolve, .repeat, .autoreverse], animations: {
+            self.textLbl.text = "Woohooo"
+            self.textLbl.alpha = 0.3
+        }, completion: nil)
+        
         audioPlayerNextPage.play()
         spawnBall()
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.tap)))

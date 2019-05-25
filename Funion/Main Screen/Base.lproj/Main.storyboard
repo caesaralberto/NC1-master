@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Whypo.ttf">
+            <string>Whypo</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -31,8 +36,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ti-fr-vHE">
                                 <rect key="frame" x="0.0" y="190" width="414" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="42"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Whypo" family="Whypo" pointSize="56"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -61,7 +66,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPM-Sm-hlj">
                                 <rect key="frame" x="0.0" y="190" width="414" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <fontDescription key="fontDescription" name="Whypo" family="Whypo" pointSize="56"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

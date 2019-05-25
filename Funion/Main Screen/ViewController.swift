@@ -40,8 +40,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var colorOne: UIView!{
         didSet{
             colorOne.layer.cornerRadius = colorOne.frame.width / 2
-            //            colorOne.layer.borderWidth = 5
-            //            colorOne.layer.borderColor = #colorLiteral(red: 1, green: 0.3921714723, blue: 0.396386385, alpha: 1)
         }
     }
     
@@ -49,8 +47,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var backgroundView: UIView!{
         didSet{
             backgroundView.layer.cornerRadius = backgroundView.frame.width / 2
-            //            backgroundView.layer.borderWidth = 5
-            //            backgroundView.layer.borderColor = #colorLiteral(red: 1, green: 0.3921714723, blue: 0.396386385, alpha: 1)
         }
     }
     
@@ -106,7 +102,7 @@ class ViewController: UIViewController {
             
             //show animation change label name
             UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {
-                self.orderLbl.text = "3"
+                self.orderLbl.text = "Three"
                 self.orderLbl.alpha = 0
                 self.backgroundView.isUserInteractionEnabled = false
                 self.audioPlayerTwo.play()
@@ -114,13 +110,13 @@ class ViewController: UIViewController {
             }) { (_) in
                 UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {
                     self.orderLbl.alpha = 1
-                    self.orderLbl.text = "2"
+                    self.orderLbl.text = "Two"
                     self.backgroundView.isUserInteractionEnabled = false
                     self.orderLbl.alpha = 0
                 }) { (_) in
                     UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {
                         self.orderLbl.alpha = 1
-                        self.orderLbl.text = "1"
+                        self.orderLbl.text = "One"
                         self.backgroundView.isUserInteractionEnabled = false
                         self.orderLbl.alpha = 0
                         
