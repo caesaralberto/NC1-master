@@ -75,10 +75,10 @@
 				10039FEA228E9E0C00CCC636 /* AppDelegate.swift */,
 				109D1C732295ACC1006C2920 /* Main Screen */,
 				109D1C782295C728006C2920 /* Splash Screen */,
+				10C2135C2299B92E008151E3 /* Font */,
 				10C2134F2298076D008151E3 /* Music File */,
 				10039FF1228E9E0C00CCC636 /* Assets.xcassets */,
 				10039FF3228E9E0C00CCC636 /* LaunchScreen.storyboard */,
-				10C2135C2299B92E008151E3 /* Font */,
 				10039FF6228E9E0C00CCC636 /* Info.plist */,
 			);
 			path = Funion;
