@@ -12,13 +12,13 @@
 		10039FF0228E9E0C00CCC636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10039FEE228E9E0C00CCC636 /* Main.storyboard */; };
 		10039FF2228E9E0C00CCC636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10039FF1228E9E0C00CCC636 /* Assets.xcassets */; };
 		10039FF5228E9E0C00CCC636 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10039FF3228E9E0C00CCC636 /* LaunchScreen.storyboard */; };
+		100BB140229C39DB00812A5A /* drum roll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 100BB13F229C39DB00812A5A /* drum roll.mp3 */; };
 		109D1C5822943BB5006C2920 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D1C5722943BB5006C2920 /* NextViewController.swift */; };
 		109D1C752295AEB8006C2920 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109D1C742295AEB8006C2920 /* SplashScreen.storyboard */; };
 		109D1C772295AEE3006C2920 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D1C762295AEE3006C2920 /* SplashScreenViewController.swift */; };
 		10C21351229807AB008151E3 /* Pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 10C21350229807AB008151E3 /* Pop.mp3 */; };
 		10C21353229807B6008151E3 /* Swoosh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 10C21352229807B6008151E3 /* Swoosh.mp3 */; };
 		10C21355229807ED008151E3 /* Winning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 10C21354229807ED008151E3 /* Winning.mp3 */; };
-		10C2135922982603008151E3 /* drum roll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 10C2135822982603008151E3 /* drum roll.mp3 */; };
 		10C2135D2299BA2F008151E3 /* Whypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10C2135B2299B91A008151E3 /* Whypo.ttf */; };
 		10C2135E2299BA33008151E3 /* PolandCannedIntoFuture.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10C2135A2299B90D008151E3 /* PolandCannedIntoFuture.ttf */; };
 /* End PBXBuildFile section */
@@ -31,6 +31,7 @@
 		10039FF1228E9E0C00CCC636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10039FF4228E9E0C00CCC636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10039FF6228E9E0C00CCC636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		100BB13F229C39DB00812A5A /* drum roll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "drum roll.mp3"; path = "../../../../Downloads/asset nc 1/music assets/drum roll.mp3"; sourceTree = "<group>"; };
 		109D1C5722943BB5006C2920 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		109D1C742295AEB8006C2920 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		109D1C762295AEE3006C2920 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 				10C21354229807ED008151E3 /* Winning.mp3 */,
 				10C21352229807B6008151E3 /* Swoosh.mp3 */,
 				10C2135822982603008151E3 /* drum roll.mp3 */,
+				100BB13F229C39DB00812A5A /* drum roll.mp3 */,
 				10C21350229807AB008151E3 /* Pop.mp3 */,
 			);
 			path = "Music File";
@@ -183,11 +185,11 @@
 			files = (
 				10C2135E2299BA33008151E3 /* PolandCannedIntoFuture.ttf in Resources */,
 				10C2135D2299BA2F008151E3 /* Whypo.ttf in Resources */,
+				100BB140229C39DB00812A5A /* drum roll.mp3 in Resources */,
 				10039FF5228E9E0C00CCC636 /* LaunchScreen.storyboard in Resources */,
 				10C21353229807B6008151E3 /* Swoosh.mp3 in Resources */,
 				109D1C752295AEB8006C2920 /* SplashScreen.storyboard in Resources */,
 				10C21355229807ED008151E3 /* Winning.mp3 in Resources */,
-				10C2135922982603008151E3 /* drum roll.mp3 in Resources */,
 				10C21351229807AB008151E3 /* Pop.mp3 in Resources */,
 				10039FF2228E9E0C00CCC636 /* Assets.xcassets in Resources */,
 				10039FF0228E9E0C00CCC636 /* Main.storyboard in Resources */,

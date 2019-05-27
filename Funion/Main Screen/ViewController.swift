@@ -147,12 +147,12 @@ class ViewController: UIViewController {
             self.backgroundView.transform = scaling.concatenating(translating)
             
         }) { (_) in
-            
         }
         
         //after finished round can be touch for other function
         let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.changeColor))
         tapGesture.minimumPressDuration = 0
+        tapGesture.allowableMovement = 15
         self.backgroundView.addGestureRecognizer(tapGesture)
         
     }
@@ -161,12 +161,11 @@ class ViewController: UIViewController {
         
         //when hold view condition
         if gestureRecognizer.state == .changed {
+            
+            //vibrate when press
+            AudioServicesPlaySystemSound(1520)
             //when alpha of backgorundView less than 0
             if backgroundView.alpha > 0 {
-                
-                //vibrate when press
-                AudioServicesPlaySystemSound(1520)
-                
                 //reduce alpha of background view
                 UIView.animate(withDuration: 1, delay: 0, options: .curveLinear, animations: {
                     self.backgroundView.alpha -= 0.1
